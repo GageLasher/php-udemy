@@ -7,7 +7,9 @@
         $this->view('pages/about');
     }
     public function index() {
-
+      if(isLoggedIn()) {
+         ridirect('posts');
+      }
 
       $data = ['title' => 'Welcome'
       
